@@ -72,12 +72,14 @@ if __name__ == "__main__":
     amplitudes = np.sqrt(A**2 + B**2)  # Amplitude = sqrt(an^2 + bn^2)
 
     # Créer le diagramme en barres
-    bars = ax2.bar(harmonics_idx[:30], amplitudes[:30], 
+    nbars = 15
+    bars = ax2.bar(harmonics_idx[:nbars], amplitudes[:nbars], 
                    color='lightgray', alpha=0.4)
     ax2.set_xlabel('Harmonique n')
     ax2.set_ylabel('Amplitude')
     ax2.set_title('Spectre d\'amplitude')
     ax2.grid(True, alpha=0.3)
+    ax2.set_xticks(range(nbars + 1))
 
     # Fonction de mise à jour
     def submit(text):

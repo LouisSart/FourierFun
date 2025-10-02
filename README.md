@@ -11,19 +11,24 @@ Python 3 avec numpy et matplotlib
  - Copier le répertoire avec tous les fichiers dans votre machine
  - Ouvrir le dossier dans l'explorateur de fichiers
  - Effectuer un MAJ + Clic droit dans la fenêtre => Ouvrir la fenêtre Powershell ici
- - Taper la commande suivante dans le shell:
- python3 .\fourier.py creneau
- (Si vous obtenez une erreur de type no module named ..., installez numpy et matplotlib avec:
-python3 -m pip install numpy, matplotlib
- - Une fenêtre s'ouvre dans laquelle vous pouvez choisir le nombre d'harmoniques de l'approximation de Fourier.
+ - Taper la commande suivante dans le shell:\
+ `python3 .\fourier.py creneau`\
+ (Si vous obtenez une erreur de type no module named ..., installez numpy et matplotlib avec:)\
+`python3 -m pip install numpy, matplotlib`
+ - Une fenêtre s'ouvre dans laquelle vous pouvez choisir le nombre d'harmoniques de l'approximation de Fourier. Il est possible de monter jusqu'à n=100 mais le spectre en amplitude ne fait figurer que les 30 premières.
+
+![creneau](./example_creneau.png "Fenêtre matplotlib pour le créneau")
 
 ## Autres signaux
 
-Plusieurs "waveforms" sont implémentées ici, vous pouvez jouer avec les différentes mots-clés:
- - triangle
- - scie
- - cercle
- - pic
+Plusieurs "waveforms" sont implémentées ici. Par exemple :\
+`python3 .\fourier.py triangle`\
+vous affichera la fenêtre pour un signal triangle. Vous pouvez jouer avec les différentes mots-clés:\
+ - `triangle`
+ - `creneau`
+ - `scie`
+ - `cercle`
+ - `pic`
 
 Le plus intéressant est le signal pic, car son spectre en amplitude n'est pas monotone
 
